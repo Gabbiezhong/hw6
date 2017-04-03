@@ -90,10 +90,6 @@ function speak(text, callback) {
   var u = new SpeechSynthesisUtterance();
   u.text = text;
   u.lang = 'en-US';
-    u.volume = 0.5 //between 0.1
-  u.pitch = 2.0 //between 0 and 2
-  u.rate = 1.0 //between 0.1 and 5-ish
-  u.voice = speechSynthesis.getVoices().filter(function(voice) { return voice.name == "Fiona"; })[0]; //pick a voice
 
   u.onend = function () {
       
